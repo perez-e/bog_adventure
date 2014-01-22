@@ -12,6 +12,8 @@ class BogsController < ApplicationController
   end
 
   def edit
+  	id = params[:id]
+  	@bog = Bog.find(id)
   end
 
   def create
