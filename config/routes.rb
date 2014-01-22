@@ -1,8 +1,10 @@
 BogApp::Application.routes.draw do
-  get "bogs/index"
-  get "bogs/show"
-  get "bogs/new"
-  get "bogs/edit"
+  root to: "bogs#index"
+  get "/bogs/:id", "bogs#show"
+  get "/bogs/new", "bogs#new"
+  get "/bogs/:id/edit", "bogs#edit"
+  post "bogs/:id", "bogs#create"
+  put "bogs/:id", "bogs#update"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
