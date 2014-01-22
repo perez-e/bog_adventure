@@ -35,5 +35,9 @@ class BogsController < ApplicationController
   end
 
   def delete
+    id = params.require(:bog_id).to_i
+    Bog.find(id).destroy
+
+    redirect_to "/"
   end
 end
