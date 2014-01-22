@@ -1,2 +1,6 @@
-<h1>Bogs#index</h1>
-<p>Find me in app/views/bogs/index.html.erb</p>
+<h1>List of Bogs</h1>
+<br />
+<% @bogs.each do |bog| %>
+	<h3><%= bog[:name] %></h3>
+	<p><%= bog[:description] %></p>
+<% end %>
