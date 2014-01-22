@@ -1,6 +1,6 @@
 <h1>List of Bog Creatures</h1>
 <br />
 <% @bogs.each do |bog| %>
-	<h3><%= bog[:name] %></h3>
+	<h3><a href="/bogs/<%= bog[:id] %>"><%= bog[:name] %></a></h3>
 	<p><%= bog[:description] %></p>
 <% end %>
