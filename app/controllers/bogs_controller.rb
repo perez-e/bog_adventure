@@ -24,6 +24,14 @@ class BogsController < ApplicationController
   end
 
   def update
+  	id = params[:id]
+  	bog = Bog.find(id)
+
+  	info = params.require(:bog).permit(:name, :description)
+  	bog.update_attributes(info)
+
+
+  	redirect_to "/bogs/#{id}"
   end
 
   def delete
