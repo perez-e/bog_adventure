@@ -1,6 +1,6 @@
 class BogsController < ApplicationController
   def index
-  	@bogs = Bog.al
+  	@bogs = Bog.all
   end
 
   def show
