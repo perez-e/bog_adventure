@@ -15,6 +15,10 @@ class BogsController < ApplicationController
   end
 
   def create
+  	bog = params.require(:bog).permit(:name, :description)
+  	Bog.create(bog)
+
+  	redirect_to "/"
   end
 
   def update
