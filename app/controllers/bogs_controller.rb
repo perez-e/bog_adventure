@@ -4,6 +4,8 @@ class BogsController < ApplicationController
   end
 
   def show
+  	id = params[:id]
+  	@bog = Bog.find(id)
   end
 
   def new
