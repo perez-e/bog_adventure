@@ -3,7 +3,7 @@ BogApp::Application.routes.draw do
   get "/bogs/:id", "bogs#show"
   get "/bogs/new", "bogs#new"
   get "/bogs/:id/edit", "bogs#edit"
-  post "bogs/:id", "bogs#create"
+  post "bogs", "bogs#create"
   put "bogs/:id", "bogs#update"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
